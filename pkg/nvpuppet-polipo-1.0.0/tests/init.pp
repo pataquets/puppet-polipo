@@ -1,0 +1,3 @@
+class { 'polipo':
+  proxyAddress => "${::ipaddress}",
+}
