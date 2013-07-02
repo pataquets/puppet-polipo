@@ -15,6 +15,7 @@ Currently only supports ::osfamily Debian.
       $diskCacheRoot = undef,
       $forbiddenURLs = undef,
       $options = ['any'],
+      $p_loglevel = undef,
     ) {
 
 where:
