@@ -17,6 +17,11 @@ Currently only supports ::osfamily Debian.
       $options = ['any'],
     ) {
 
+where:
+
+    proxyAddress => '::0',
+    allowedClients => '127.0.0.1, 172.16.0.0/24', 
+
 ## Bug reports
 Please file bug reports to Issues on GitHub.
 
