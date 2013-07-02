@@ -1,0 +1,27 @@
+{
+  "project_page": "http://github.com/nvalentine-puppetlabs/puppet-polipo",
+  "description": "Install and configure polipo caching web proxy.",
+  "types": [
+
+  ],
+  "source": "git://github.com/nvalentine-puppetlabs/puppet-polipo.git",
+  "license": "Apache License, Version 2.0",
+  "dependencies": [
+
+  ],
+  "summary": "Install and configure polipo caching web proxy.",
+  "checksums": {
+    "params.pp": "c08f1070f8e2d19871bf61f794bcaf31",
+    "templates/options.erb": "cdb13cd330de6899d0e45ddeb249a88c",
+    "README.md": "2a601b31a29656b3fbbf422cfc24e2dd",
+    "tests/init.pp": "ed6d5a5c355500e3905b72a550e9f3b8",
+    "Modulefile": "63085f696da63ee60cb6b9c88380671d",
+    "templates/config.erb": "f751fde92bb0f486df2fcbc0630149e3",
+    "manifests/params.pp": "6d8f6639f8ff2629bcc4feb3bdb6d98d",
+    "manifests/init.pp": "93398d0f9f1871fc3fc78b7b94b074ca",
+    "templates/forbidden.erb": "9860e19246e43dbd30f5934aa2bce8b9"
+  },
+  "author": "nathan@puppetlabs.com",
+  "name": "nvpuppet-polipo",
+  "version": "1.0.1"
+}
