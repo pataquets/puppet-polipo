@@ -6,3 +6,5 @@ license 'Apache License, Version 2.0'
 summary 'Install and configure polipo caching web proxy.'
 description 'Install and configure polipo caching web proxy.'
 project_page 'http://github.com/nvalentine-puppetlabs/puppet-polipo'
+
+dependency 'puppetlabs/stdlb', '1.2.0'
