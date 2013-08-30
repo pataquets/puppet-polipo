@@ -21,7 +21,7 @@
 
 # proxyAddress = "::0"        # both IPv4 and IPv6
 # proxyAddress = "0.0.0.0"    # IPv4 only
-<% if @proxyAddress %>
+<% if @proxyAddress -%>
 proxyAddress = "<%= @proxyAddress %>"
 <% end %>
 
@@ -30,7 +30,7 @@ proxyAddress = "<%= @proxyAddress %>"
 # allowedClients = 127.0.0.1, 192.168.42.0/24
                                             
 # allowedClients = 127.0.0.1              
-<% if @allowedClients %>
+<% if @allowedClients -%>
 allowedClients = <%= @allowedClients %>
 <% end %>
 
@@ -38,7 +38,7 @@ allowedClients = <%= @allowedClients %>
 # something else than the host name:
 
 # proxyName = "polipo.example.org"
-<% if @proxyName %>
+<% if @proxyName -%>
 proxyName = "<%= @proxyName %>"
 <% end %>
 
@@ -82,7 +82,7 @@ objectHighMark = <%= @objectHighMark %>
 # non-standard location:
 
 # diskCacheRoot = "~/.polipo-cache/"
-<% if @diskCacheRoot %>
+<% if @diskCacheRoot -%>
 diskCacheRoot = "<%= @diskCacheRoot %>"
 <% end %>
 
@@ -168,6 +168,10 @@ diskCacheRoot = "<%= @diskCacheRoot %>"
 
 # mindlesslyCacheVary = true
 
-<% if @p_loglevel %>
+<% if @p_loglevel -%>
 logLevel = <%= @p_loglevel %>
+<% end %>
+
+<% if @maxDiskCacheEntrySize ->
+maxDiskCacheEntrySize = <%= @maxDiskCacheEntrySize %>
 <% end %>
