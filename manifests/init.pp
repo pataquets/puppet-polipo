@@ -18,10 +18,10 @@ class polipo(
   validate_re($chunkHighMark, '[0-9]')
   validate_re($objectHighMark, '[0-9]')
   if $diskCacheroot { validate_absolute_path($diskCacheRoot) }
-  if $maxDiskCachEntrySize { validate_re($maxDiskCacheEntrySize, '[0-9]+')
+  if $maxDiskCachEntrySize { validate_re($maxDiskCacheEntrySize, '[0-9]+') }
   if $forbiddenURLs { validate_string($forbiddenURLs) }
   validate_array($options)
-  if $p_loglevel { validate_string($p_loglevel, '0x[0-9]+')
+  if $p_loglevel { validate_string($p_loglevel, '0x[0-9]+') }
 
   $package = $polipo::params::package  
   $service = $polipo::params::service  
