@@ -21,26 +21,26 @@
 
 # proxyAddress = "::0"        # both IPv4 and IPv6
 # proxyAddress = "0.0.0.0"    # IPv4 only
-<% if @proxyAddress %>
+<% if @proxyAddress -%>
 proxyAddress = "<%= @proxyAddress %>"
-<% end %>
+<% end -%>
 
 # If you are enabling 'proxyAddress' above, then you want to enable the
 # 'allowedClients' variable to the address of your network, e.g.
 # allowedClients = 127.0.0.1, 192.168.42.0/24
                                             
 # allowedClients = 127.0.0.1              
-<% if @allowedClients %>
+<% if @allowedClients -%>
 allowedClients = <%= @allowedClients %>
-<% end %>
+<% end -%>
 
 # Uncomment this if you want your Polipo to identify itself by
 # something else than the host name:
 
 # proxyName = "polipo.example.org"
-<% if @proxyName %>
+<% if @proxyName -%>
 proxyName = "<%= @proxyName %>"
-<% end %>
+<% end -%>
 
 # Uncomment this if there's only one user using this instance of Polipo:
 
@@ -82,9 +82,9 @@ objectHighMark = <%= @objectHighMark %>
 # non-standard location:
 
 # diskCacheRoot = "~/.polipo-cache/"
-<% if @diskCacheRoot %>
+<% if @diskCacheRoot -%>
 diskCacheRoot = "<%= @diskCacheRoot %>"
-<% end %>
+<% end -%>
 
 # Uncomment this if you want to disable the local web server:
 
@@ -168,6 +168,10 @@ diskCacheRoot = "<%= @diskCacheRoot %>"
 
 # mindlesslyCacheVary = true
 
-<% if @p_loglevel %>
+<% if @p_loglevel -%>
 logLevel = <%= @p_loglevel %>
-<% end %>
+<% end -%>
+
+<% if @maxDiskCacheEntrySize -%>
+maxDiskCacheEntrySize = <%= @maxDiskCacheEntrySize %>
+<% end -%>

@@ -5,11 +5,23 @@ class polipo(
   $chunkHighMark = 819200,
   $objectHighMark = 128,
   $diskCacheRoot = undef,
+  $maxDiskCacheEntrySize = undef,
   $forbiddenURLs = undef,
   $options = ['any'],
   $p_loglevel = undef,
 ) {
   include polipo::params
+
+  if $proxyAddress { validate_string($proxyAddress) }
+  if $allowedClients { validate_string($allowedClients) }
+  if $proxyname { validate_string($proxyname) }
+  validate_re($chunkHighMark, '[0-9]')
+  validate_re($objectHighMark, '[0-9]')
+  if $diskCacheroot { validate_absolute_path($diskCacheRoot) }
+  if $maxDiskCachEntrySize { validate_re($maxDiskCacheEntrySize, '[0-9]+') }
+  if $forbiddenURLs { validate_string($forbiddenURLs) }
+  validate_array($options)
+  if $p_loglevel { validate_string($p_loglevel, '0x[0-9]+') }
 
   $package = $polipo::params::package  
   $service = $polipo::params::service  
