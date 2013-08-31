@@ -9,15 +9,15 @@
   "project_page": "http://github.com/nvalentine-puppetlabs/puppet-polipo",
   "dependencies": [
     {
-      "name": "puppetlabs/stdlb",
-      "version_requirement": "1.2.0"
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "4.1.0"
     }
   ],
   "types": [
 
   ],
   "checksums": {
-    "Modulefile": "8628eb9ea591ede75bd8785c66f1bd38",
+    "Modulefile": "364e469ea6257146d064ac8396720c62",
     "README.md": "9c3b0d7bc3956030be744ca0a7d713c6",
     "manifests/init.pp": "0267f270bc3f71a5692fd7cfcb876701",
     "manifests/params.pp": "6d8f6639f8ff2629bcc4feb3bdb6d98d",
