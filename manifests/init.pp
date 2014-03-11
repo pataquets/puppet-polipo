@@ -9,6 +9,8 @@ class polipo(
   $forbiddenURLs = undef,
   $options = ['any'],
   $p_loglevel = undef,
+  $socksParentProxy = undef,
+  $socksProxyType = undef,
 ) {
   include polipo::params
 
@@ -22,6 +24,8 @@ class polipo(
   if $forbiddenURLs { validate_string($forbiddenURLs) }
   validate_array($options)
   if $p_loglevel { validate_string($p_loglevel, '0x[0-9]+') }
+  if $socksParentProxy { validate_string($socksParentProxy) }
+  if $socksProxyType { validate_string($socksProxyType) }
 
   $package = $polipo::params::package  
   $service = $polipo::params::service  

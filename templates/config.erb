@@ -54,6 +54,12 @@ proxyName = "<%= @proxyName %>"
 
 # socksParentProxy = "localhost:9050"
 # socksProxyType = socks5
+<% if @socksParentProxy -%>
+socksParentProxy = "<%= @socksParentProxy %>"
+<% end -%>
+<% if @socksProxyType -%>
+socksProxyType = <%= @socksProxyType %>
+<% end -%>
 
 
 ### Memory

@@ -17,6 +17,8 @@ Currently only supports ::osfamily Debian.
       $forbiddenURLs = undef,
       $options = ['any'],
       $p_loglevel = undef,
+      $socksParentProxy = undef,
+      $socksProxyType = undef,
     ) {
 
 where:
